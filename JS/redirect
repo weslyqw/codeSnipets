@@ -1,0 +1,11 @@
+ function redirectWarden(){
+    var jurisdiction = document.getElementById("countries").value;
+    if(jurisdiction == "TT")
+      {
+        location.href = "https://cmelitegroup.propreports.com/login.php";
+      }
+    else if(jurisdiction == "KY")
+      {
+        location.href = "http://ky.cmelitegroup.propreports.com/login.php"
+      }
+  }
