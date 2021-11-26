@@ -1,0 +1,18 @@
+ function populateList(){
+    var countryList ={};
+    var options = '';
+    slctbox = document.getElementById('countries');
+
+    fetch("./countries.json")
+    .then(response => {
+       return response.json();
+    })
+    .then(data => {
+        for(var i=0 ; i<data.length ; i++)
+        {
+          var label = data[i]['Country'];
+          var value = data[i]['Jurisdiction']; //or whatever the value you want to show
+          var opt = document.createElement('option');
+          slctbox.options.add(new Option(label, value));
+    }});
+ }
